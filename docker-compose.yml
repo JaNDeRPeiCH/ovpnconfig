@@ -18,9 +18,23 @@ services:
       - mongo
     ports:
       - "3000:3000"
+    environment:
+      PORT: 3000
+      TOKEN_SECRET: 8789
+      MONGODB_STRING: mongodb://admin:admin@mongo:27017/
+      EMAIL_PASS:
+      EMAIL_USER:
+      USER_DAILY_LIMIT: 9999
+      PAYPAL_CLIENT_ID:
+      PAYPAL_CLIENT_SECRET:
+      PAYPAL_USD_THREE_MONTHS: 4.99
+      PAYPAL_USD_SIX_MONTHS: 14.99
+      PAYPAL_USD_ONE_YEAR: 24.99
+      PAYPAL_BRL_THREE_MONTHS: 24.99
+      PAYPAL_BRL_SIX_MONTHS: 44.99
+      PAYPAL_BRL_ONE_YEAR: 59.99
+      TRIAL_DAYS: 9999
       
-
-
   mongo:
     container_name: mongo
     image: mongo
